@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员登录</title>
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div class="bg_login">
+        <h1><img src="../img/logo_reg.png" alt=""></h1>
+        <form class="login" action="../data/php/login.php" method="POST" name="login">
+            <h5>
+                <span>手机号不能为空</span>
+                <span>密码不能为空</span>
+            </h5>
+            <input type="text" placeholder="您的手机号"/>
+            <input type="password" placeholder="您的密码"/>
+            <a href="#">忘记密码</a>
+            <input type="button" value="登录">
+        </form> 
+        <div class="reg">还没有账号？<a href="#">马上注册</a></div>
+    </div>
+
+
+</body>
+</html>

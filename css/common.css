@@ -1,0 +1,25 @@
+/* 样式重置 */
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+html,body{font-family: "微软雅黑",Arail,Tabhoma; font-size: 100%; text-align: left; width: 100%; height: 100%; color: #333;}
+ul,ol{list-style: none;}
+img{border: 0;}
+input,select,textarea,button{outline:0; -webkit-appearance: none; font-family: "微软雅黑",Arail,Tabhoma;}
+textarea{resize:none; overflow: auto;}
+table{border-collapse: collapse; border-spacing: 0;}
+th,strong,var,em{font-weight: normal; font-style: normal;}
+a{text-decoration: none;}
+
+/*----其它公共样式-----*/
+
+/* 高度塌陷 */
+.clearfix:after{
+    content: "."; clear: both;
+    display: none;visibility: hidden;
+    overflow: hidden;font-size: 0;
+    height: 0;
+}
+
+/* 左浮动 */
+.fl{float:left;}
+/* 右浮动 */
+.fr{float:right;}

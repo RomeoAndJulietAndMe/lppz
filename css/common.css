@@ -13,8 +13,8 @@ a{text-decoration: none;}
 
 /* 高度塌陷 */
 .clearfix:after{
-    content: "."; clear: both;
-    display: none;visibility: hidden;
+    content: ""; clear: both;
+    display: block;visibility: hidden;
     overflow: hidden;font-size: 0;
     height: 0;
 }

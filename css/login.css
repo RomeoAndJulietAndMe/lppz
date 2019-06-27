@@ -3,28 +3,54 @@
     height: 100%;
     background: url(../img/bg_reg.jpg) no-repeat;
     background-size: 100% 100%;
+    padding-top: 7%;
 }
+.login_logo{
+    display: block;
+    margin-bottom: 20px; 
+   text-align: center;
+}
+.login_reg{
+   /* visibility: hidden; */
+  text-align: left !important;
+  height: 36px;
+  line-height: 36px;
+}
+
 .login{
     width: 370px;
     height: 262px;
     background: #fff;
-    padding-top: 15px; padding-bottom: 20px;
+    padding-top: 30px;
     border-radius: 5px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .4);
     
 }
 .login a {
     display: block;
-    /* background: red; */
     font-size: 12px;
     color: #f08b1d;
     padding-right: 30px;
     text-align: right;
     margin-top: 5px;
 }
-.bg_login h1, .login, .reg{
-    margin: 0 auto; border: 1px solid red;
+ .login, .reg , .login_reg{
+    margin: 0 auto;  
     text-align: center;
+}
+.reg{   
+    font-size: small;
+    margin-top: 10px;
+}
+.reg a em{
+    color: #fff;
+    font-weight: bold;
+}
+.reg a{
+    color: #ffa800;
+    padding: 3px 8px;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 20px;
 }
 .login input{   
     width:306px;
@@ -35,6 +61,11 @@
     font-size: 14px;
     line-height: 36px; padding-left: 10px;
     margin-top: 10px;
+    box-sizing: border-box;
+}
+.login_reg{
+    width:306px;
+    height:36px;
 }
 .login input[type="button"]{
     background-color: #e94715;

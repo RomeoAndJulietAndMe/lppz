@@ -21,12 +21,12 @@ body,html{
 .w_entirety{
 	width: 100%;
 }
-.w_+header{
+.w_header{
 	width: 1269px;
 	height: 80px;
 	margin: 0 auto;
 }
-h1{
+.w_text_eg{
 	font-size: 30px;
 	color: #e1251b;
 	margin: 100px auto 0px;
@@ -34,10 +34,32 @@ h1{
 	font-weight: 900;
 	text-align: center;
 }
-h2{
+.w_text_ch{
 	font-size: 28px;
 	color: #e1251b;
 	margin: 40px auto 82px;
 	width: 1269px;
 	text-align: center;
+}
+.w_list{
+	width: 1269px;
+	height: 420px;
+	margin: 70px auto 0;
+}
+.w_list li{
+	/* box-sizing: border-box; */
+	padding: 0 32px;
+	float: left;
+	width: 410px;
+}
+h3{
+	font-size: 26px;
+	color: #e1251b;
+	margin-top:33px;
+}
+.w_card_ex{
+	margin-top: 1em;
+    font-size: 14px;
+    line-height: 24px;
+    color: gray
 }

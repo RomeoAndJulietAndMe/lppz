@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>账号注册</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font/iconfont.css">
+</head>
+<body class="c_login_bg">    
+    <div class="bg_login">
+        <a class="login_logo"><img src="../img/logo_reg.png" alt=""></a>
+       
+        <!-- 注册密码 start -->
+        <form class="reg_finish login-register login" action="../data/php/login.php" method="POST" name="register">
+            <p class="register_hd">账号注册</p>
+            <h5 class="login_reg">
+                <i></i><span>密码不能空</span> 
+            </h5>
+            <input class="register_pw" type="password" name='register_pw' placeholder="您的密码"/>
+            <input class="register_rpw" type="password" name='register_rpw' placeholder="确认密码"/>
+            
+            <h6 style="border:1px solid red" class="clearfix">
+                <a class="register_updateYZM fl" href="#" title="刷新验证码">
+                    <!-- <img src="" alt=""> -->
+                </a>
+                <input class="imgCode fl" type="text" placeholder="输入验证码" name="imgCode">
+            </h6>
+                       
+            <input type="submit" value="完成注册">
+           
+        </form> 
+          <!-- 注册密码end -->
+       
+        
+    </div>
+
+    <script src="../js/jquery-1.8.3.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+</html>

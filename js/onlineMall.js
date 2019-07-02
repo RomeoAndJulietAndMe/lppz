@@ -1,5 +1,5 @@
 $(function(){
-
+    // $('.l_header').load('d_lppz_header.html');
 
 
 

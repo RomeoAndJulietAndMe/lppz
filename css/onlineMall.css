@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+/* 头部导航区域 */
+.l_header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
 .l_container{
     margin-top: 80px;
 }

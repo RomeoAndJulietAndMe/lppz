@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,36 +11,157 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/font/iconfont.css">
 </head>
-<body class="c_login_bg">    
+
+<body class="c_login_bg">
     <div class="bg_login">
-        <a class="login_logo"><img src="../img/logo_reg.png" alt=""></a>
-       
+        <a class="login_logo">
+            <img src="../img/logo_reg.png" alt="">
+        </a>
+
         <!-- 注册密码 start -->
-        <form class="reg_finish login-register login" action="../data/php/login.php" method="POST" name="register">
+        <form class="reg_finish login-register login"  method="POST" name="register">
             <p class="register_hd">账号注册</p>
             <h5 class="login_reg">
-                <i></i><span>密码不能空</span> 
+                <i></i>
+                <span></span>
             </h5>
-            <input class="register_pw" type="password" name='register_pw' placeholder="您的密码"/>
-            <input class="register_rpw" type="password" name='register_rpw' placeholder="确认密码"/>
-            
-            <h6 style="border:1px solid red" class="clearfix">
-                <a class="register_updateYZM fl" href="#" title="刷新验证码">
-                    <!-- <img src="" alt=""> -->
-                </a>
+            <input class="register_pw" type="password" name='register_pw' placeholder="您的密码" />
+            <input class="register_rpw" type="password" name='register_rpw' placeholder="确认密码" />
+
+            <h6 class="clearfix">
+                <span class="register_updateYZM fl" href="#" title="刷新验证码">
+                    <!-- <img src="../data/php/yzm.php" alt="没出来"> -->
+                    <img style="display: none" src="../data/php/yzm.php" alt="请求yzm.php形成图片png,下一个img就能用">
+                    <img src="../img/yzm.png" alt="没出来">
+                </span>
                 <input class="imgCode fl" type="text" placeholder="输入验证码" name="imgCode">
             </h6>
-                       
-            <input type="submit" value="完成注册">
-           
-        </form> 
-          <!-- 注册密码end -->
-       
-        
+
+            <input class="register_sub" type="button" value="完成注册">
+
+        </form>
+        <!-- 注册密码end -->
+
+
     </div>
 
     <script src="../js/jquery-1.8.3.js"></script>
     <script src="../js/login.js"></script>
+    <script type="text/javascript">
+var register_pw = '';
+var  register_rpw = '';
+var yzm = '0';
+//输入验证码判断
+$('.imgCode').blur(YZM);
+function YZM(){
+    // console.log(yzm); 
+    if( $('.imgCode').val() == yzm ){
+        $('.reg_finish .login_reg ').css('visibility','hidden'); 
+        return true;
+    }else{
+        $('.reg_finish .login_reg ').css('visibility','visible');
+        $('.reg_finish .login_reg span').html('验证码错误--刷新');
+        return false;
+    }
+}
+
+//刷新验证码
+$('.register_updateYZM').click(function (e) { 
+            $.ajax({
+                type: 'get',
+                url: '../data/php/yzm.php',
+                cache:false,
+                success: function (yz){
+                    // alert(yzm);
+                    // $('.clearfix img').attr('src','../img/yzm.png');
+                    // $('.register_updateYZM').html('<img src="http://localhost/lppz/img/yzm.png" alt="没出来">');
+                    $('.register_updateYZM').html('<img src="http://localhost/lppz/img/yzm.png?_='+new Date().getTime()+'" alt="没出来">');
+                 yzm = yz;
+                //  console.log('yzm'+yz)
+                    
+                },
+                error: function (err){
+                    alert(err);
+                }
+            });
+
+        });
+
+//完成注册 ../data/php/login.php
+$('.register_sub').click(function (){ 
+// console.log(register_pw2()+register_rpw2());
+     if( register_rpw2() && register_pw2() &&  YZM() ){ //如果都成立 就注册请求
+    var register_ph = localStorage.getItem('register_phone') ; 
+    console.log(register_ph+"电话号码"+register_pw);
+            $.ajax({
+                type:'post',
+                url:'../data/php/login.php',
+                data:{register_phone:register_ph, register_pw:register_pw,sql_act:'insert'} ,
+                // dataType:"json",
+              /*   data:'register_phone='+localStorage.getItem('register_phone')+'&register_pw='+ $('.register_pw').val()+'&sql_act=insert', */
+                success:function (json){                  
+                    console.log(json.err);
+                    console.log('---------注册----');
+                    if(json.err == '0') window.location.href='login.html';
+                    if(json.err == '1') 
+                    console.log(json.msg);              
+                },
+                fail: function (err){
+                    console.log(err.responseText);
+                    $("body").html(err.responseText);
+                
+                }
+            });
+     }
+ 
+ 
+
+    
+});
+
+//密码
+$('.register_pw').blur(register_pw2) ;
+function register_pw2(){
+     register_pw = $('.register_pw').val();  console.log('----'+register_pw);
+     if( register_pw == '' || register_pw == null || register_pw == undefined ){
+        $('.reg_finish .login_reg ').css('visibility','visible');
+        $('.reg_finish .login_reg span').html('密码不能为空'); 
+        return false;       
+     }else{   
+         if(register_pw.length < 6){
+            $('.reg_finish .login_reg ').css('visibility','visible');
+            $('.reg_finish .login_reg span').html('密码不能小于6个字符');  
+            return false;
+         }
+         if( register_pw.length > 50 ){
+            $('.reg_finish .login_reg ').css('visibility','visible');
+            $('.reg_finish .login_reg span').html('密码不能大于50个字符'); 
+            return false;
+         }
+
+     }
+     $('.reg_finish .login_reg ').css('visibility','hidden');
+    return true;
+}
+
+//确认密码
+$('.register_rpw').blur(register_rpw2);
+function register_rpw2(){
+     register_rpw =$('.register_rpw').val();   
+     if( register_rpw != register_pw ){
+        $('.reg_finish .login_reg ').css('visibility','visible');
+        $('.reg_finish .login_reg span').html('输入的密码不一致'); 
+        return false;       
+     }
+     $('.reg_finish .login_reg ').css('visibility','hidden')
+     return true;
+}
+
+
+
+
+    </script>
 
 </body>
+
 </html>

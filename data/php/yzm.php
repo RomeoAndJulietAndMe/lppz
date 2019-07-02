@@ -4,7 +4,7 @@ header('Content-type:text/html');
 //验证码text内容
 $text = array('1','0','2','3','4','5','6','7','8','9');
 $index_text='';
-//建议放到前端
+
 for($i=0; $i<4; $i++){
     $index_text.=$text[rand(0,9)];
 }

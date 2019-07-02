@@ -54,7 +54,7 @@ var yzm = '0';
 //输入验证码判断
 $('.imgCode').blur(YZM);
 function YZM(){
-    // console.log(yzm); 
+    console.log(yzm); 
     if( $('.imgCode').val() == yzm ){
         $('.reg_finish .login_reg ').css('visibility','hidden'); 
         return true;
@@ -75,9 +75,10 @@ $('.register_updateYZM').click(function (e) {
                     // alert(yzm);
                     // $('.clearfix img').attr('src','../img/yzm.png');
                     // $('.register_updateYZM').html('<img src="http://localhost/lppz/img/yzm.png" alt="没出来">');
-                    $('.register_updateYZM').html('<img src="http://localhost/lppz/img/yzm.png?_='+new Date().getTime()+'" alt="没出来">');
+                $('.register_updateYZM').html('<img src="http://localhost/lppz/img/yzm.png?_='+new Date().getTime()+'" alt="没出来">');
+               /* $('.register_updateYZM').html('<img src="http://localhost/lppz/data/php/yzm.php?_='+new Date().getTime()+'" alt="没出来">'); */
                  yzm = yz;
-                //  console.log('yzm'+yz)
+                 console.log('yzm'+yz);
                     
                 },
                 error: function (err){

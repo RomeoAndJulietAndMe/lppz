@@ -65,7 +65,12 @@ $('.login input[type="button"]').click(function (){
              data:{login_phone:login_phone,login_pw:login_pw,sql_act:'login'},
              success: function (str){
                  console.log('登录成功'+str);
+                if( str.err == '0' )
                  window.location.href='login.html';
+                 if( str.err == '1' ){
+                    $('.login .login_reg ').css('visibility','visible');
+                    $('.login .login_reg span').html('用户名或密码有误');  
+                 }
              },
              error: function (err){
                  console.log(err);
@@ -94,11 +99,12 @@ $('.login input[type="button"]').click(function (){
             $('.login .login_reg ').css('visibility','visible');
             $('.login .login_reg span').html('密码不能小于6个字符');  
             return false;
-         }
-         if( login_pw.length > 50 ){
-            $('.login .login_reg ').css('visibility','visible');
-            $('.login .login_reg span').html('密码不能大于50个字符'); 
-            return false;
+         }else{
+             if( login_pw.length > 50 ){
+                $('.login .login_reg ').css('visibility','visible');
+                $('.login .login_reg span').html('密码不能大于50个字符'); 
+                return false;
+              } 
          }
 
      }

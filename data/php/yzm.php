@@ -44,7 +44,7 @@ for($j=0;$j<100;$j++){
 
 // imagepng($xian);//浏览器输出图像
 imagepng($xian,'../../img/yzm.png');
-// echo $index_text;
+echo $index_text;
 
 imagedestroy($xian);//销毁图像在内存中的占用
 

@@ -50,21 +50,34 @@
     <script type="text/javascript">
 var register_pw = '';
 var  register_rpw = '';
+var yzm = '0';
+//输入验证码判断
+$('.imgCode').blur(YZM);
+function YZM(){
+    // console.log(yzm); 
+    if( $('.imgCode').val() == yzm ){
+        $('.reg_finish .login_reg ').css('visibility','hidden'); 
+        return true;
+    }else{
+        $('.reg_finish .login_reg ').css('visibility','visible');
+        $('.reg_finish .login_reg span').html('验证码错误--刷新');
+        return false;
+    }
+}
 
-//验证码
-$('.register_updateYZM').click(function (e) {
-            console.log("--------");
-
+//刷新验证码
+$('.register_updateYZM').click(function (e) { 
             $.ajax({
                 type: 'get',
                 url: '../data/php/yzm.php',
                 cache:false,
-                success: function (yzm){
+                success: function (yz){
                     // alert(yzm);
                     // $('.clearfix img').attr('src','../img/yzm.png');
                     // $('.register_updateYZM').html('<img src="http://localhost/lppz/img/yzm.png" alt="没出来">');
                     $('.register_updateYZM').html('<img src="http://localhost/lppz/img/yzm.png?_='+new Date().getTime()+'" alt="没出来">');
-                    console.log(123);
+                 yzm = yz;
+                //  console.log('yzm'+yz)
                     
                 },
                 error: function (err){
@@ -77,7 +90,7 @@ $('.register_updateYZM').click(function (e) {
 //完成注册 ../data/php/login.php
 $('.register_sub').click(function (){ 
 // console.log(register_pw2()+register_rpw2());
-     if( register_rpw2() && register_pw2() ){ //如果都成立 就注册请求
+     if( register_rpw2() && register_pw2() &&  YZM() ){ //如果都成立 就注册请求
     var register_ph = localStorage.getItem('register_phone') ; 
     console.log(register_ph+"电话号码"+register_pw);
             $.ajax({

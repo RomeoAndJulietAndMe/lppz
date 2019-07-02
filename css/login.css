@@ -14,12 +14,7 @@
    text-align: center;
    padding-top: 90px;
 }
-.login_reg{
-   /* visibility: hidden; */
-  text-align: left !important;
-  height: 36px;
-  line-height: 36px;
-}
+
 /*login-register是 login 和 register部分公共部分 */
 .login-register{
     width: 370px;  
@@ -39,7 +34,7 @@
     /* display: none; */
 }
 .register{
-    /* display: none; */
+    display: none;
     padding-bottom: 20px;
     margin: 0 auto;
 }
@@ -59,15 +54,17 @@
     font-size: small;
     margin-top: 10px;   
 }
-.reg a em{
+.reg .login-to-register em, .reg .register-to-login em{
     color: #fff;
     font-weight: bold;
 }
-.reg a{
+.reg .login-to-register , .reg .register-to-login {
     color: #ffa800;
     padding: 3px 8px;
     background: rgba(0, 0, 0, .4);
     border-radius: 20px;
+    cursor: pointer;
+    font-style: normal;
 }
 .login input,.register input[type="text"],.register input[type='button']{   
     width:306px;
@@ -85,6 +82,12 @@
     height:26px; 
     visibility: hidden;
 }
+.login_reg{
+    visibility: hidden;
+   text-align: left !important;
+   height: 36px;
+   line-height: 36px;
+ }
 .login_reg i{
     display: inline-block;
     width: 14px;
@@ -134,7 +137,7 @@
 }
 
 .register-reg{
-    /* display: none; */
+    display: none;
 }
 .login-reg{
     /* display: none; */
@@ -158,16 +161,27 @@
   
 }
 .reg_finish .login_reg {
-    visibility: visible;
+    visibility: hidden;
 }
-
-.register_updateYZM{
+.reg_finish h6{ 
+    /* background: red; */
+    vertical-align: bottom;
+}
+.reg_finish .register_updateYZM{
     /* display: inline-block; */
     width: 100px;
     height: 30px;
+    border: 1px solid red;
+    /* background: yellow; */
+    /* padding-top: 10px; */
+    margin-left: 30px;margin-top: 16px;
+    text-align: center;
+}
+.register_updateYZM img{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
     background: yellow;
-    padding-top: 10px;
-    margin-left: 30px;
 }
 .reg_finish .imgCode{
     width: 166px;
@@ -184,3 +198,4 @@
 .bg_login .reg_finish{
     padding-bottom: 50px;
 }
+ 

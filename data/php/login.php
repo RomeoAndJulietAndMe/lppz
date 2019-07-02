@@ -97,7 +97,7 @@ switch($sql_act){
             echo '{"err":"0","msg":"登录成功"}';
             exit();
         }else{
-            echo '{"err":"0","msg":"用户名或密码有误"}';
+            echo '{"err":"1","msg":"用户名或密码有误"}';
             exit();
         }
         break;

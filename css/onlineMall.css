@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.l_container{
+    margin-top: 80px;
+}
+/* 广告图banner区域 */
+.l_banner{
+    background: url(../img/onlineMall_banner.jpg) no-repeat center;
+    background-size: cover;
+    height: 296px;
+}
+
+
+.l_content{
+    padding: 0 40px;
+}
+/* 中文和英文大标题，线上商城 */
+.l_title{
+    text-align: center;
+    padding: 79px 0 58px 0;
+}
+.l_title h1{
+    line-height: 63px;
+    color: #e1251b;
+    font-size: 32px;
+}
+.l_title p{
+    line-height: 67px;
+    color: #e1251b;
+    font-size: 30px;
+}
+/* 商城链接入口的样式 */
+.l_links{
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+.l_links li{
+    text-align: center;
+}
+.l_links li .show{
+    width: 180px;
+    height: 180px;
+    display: block;
+    border: 2px solid #e64e46;
+    border-radius: 50%;
+    line-height: 180px;
+}
+.l_links li .show .iconfont{
+    font-size: 80px;
+    color: #e1251b;
+}
+.l_links li:nth-child(1) .show .iconfont{
+    font-size: 100px;
+}
+.l_links li:nth-child(3) .show .iconfont{
+    font-size: 100px;
+}
+.l_links li:nth-child(4) .show img{
+    margin-top: 60px;
+}
+.l_links li:nth-child(5) .show img{
+    margin-top: 53px;
+}
+.l_links li div{
+    margin-top: 25px;
+    font-size: 14px;
+    color: #e1251b;
+}
+.l_links li .hoverShow{
+    width: 184px;
+    height: 184px;
+    display: block;
+    border-radius: 50%;
+    line-height: 184px;
+    background: #e1251b;
+    display: none;
+}
+.l_links li .hoverShow .iconfont{
+    font-size: 80px;
+    color: #fff;
+    font-weight: 900;
+}

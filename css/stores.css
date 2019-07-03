@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+/* 头部导航区域 */
+.l_header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+
 .l_container{
     margin-top: 80px;
 }
@@ -63,6 +72,7 @@
     line-height: 50px;
     font-size: 30px;
     font-weight: 900;
+    cursor: pointer;
 }
 .l_search em{
     width: 50px;
@@ -74,8 +84,50 @@
     line-height: 50px;
     font-size: 30px;
     margin-left: 10px;
+    cursor: pointer;
 }
 /* 链接地图API区域 */
 .l_map{
     height: 600px;
+    margin-bottom: 28px;
+}
+
+/* 地图搜索结果显示区域 */
+.l_info{
+    min-height: 120px;
+}
+.info_list{
+    margin-left: -12px;
+    margin-right: -12px;
+    /* display: none; */
+}
+.info_list li{
+    width: 33.333%;
+    float: left;
+}
+.info_list li .txt{
+    height: 240px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 28px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;  
+    position: relative;
+}
+.info_list li .txt h3{
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.info_list li .txt div{
+    font-size: 14px;
+    color: #808080;
+    line-height: 25px;
+}
+.info_list li .txt span.iconfont{
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    color: #9FA0A0;
 }

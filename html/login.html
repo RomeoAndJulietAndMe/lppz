@@ -14,115 +14,36 @@
     <div class="bg_login">
         <a class="login_logo"><img src="../img/logo_reg.png" alt=""></a>
         <!-- 登录块start -->
-        <form class="login login-register" action  method="POST" name="login">
+        <form class="login login-register" action="../data/php/login.php" method="POST" name="login">
             <h5 class="login_reg">
-                    <i></i>
-                <span>手机号不能为空</span>              
+                <span>手机号不能为空</span>
+                <!-- <span>密码不能为空</span> -->
             </h5>
-            <input class="login_phone" type="text" name='ph' placeholder="您的手机号"/>
-            <input class="login_pw" type="password" name='pw' placeholder="您的密码"/>
+            <input type="text" name='ph' placeholder="您的手机号"/>
+            <input type="password" name='pw' placeholder="您的密码"/>
             <a href="#">忘记密码</a>
             <input type="button" value="登录">
         </form> 
-        <div class="login-reg reg"><i class="login-to-register"><em>还没有账号？</em>马上注册</i></div>
         <!-- 登录块end -->
         <!-- 注册块start -->
-        <form class="register login-register" action method="POST" name="register">
+        <form class="register login-register" action="../data/php/login.php" method="POST" name="register">
             <h5 class="login_reg">
-                <i></i><span></span> 
+                <i></i><span>手机号不能空</span> 
             </h5>
-            <input type="text" class="register_phone" name='register_phone' placeholder="您的手机号码"><input type="hidden" >
+            <input type="text" name='register_phone' placeholder="您的手机号码"><input type="hidden" name='sql_insert'>
             <input type="button" value="立即注册">
             <p class="agreement">    
                 <input type="checkbox" checked disabled>注册视为同意 <a href="#"><i class="iconfont icon-zuoshuming"></i>用户使用协议<b class="iconfont icon-youshuming"></b></a>
             </p>
         </form> 
-        <div class="register-reg reg"><i class="register-to-login"><em>已经注册？</em>马上登录</i></div>
-          <!-- 注册块end -->         
-       
+          <!-- 注册块end -->
+        <div class="reg login-reg"><a href="#"><em>还没有账号？</em>马上注册</a></div>
+        <div class="register-reg reg"><a href="#"><em>已经注册？</em>马上登录</a></div>
         
     </div>
 
     <script src="../js/jquery-1.8.3.js"></script>
     <script src="../js/login.js"></script>
-    <script>
-
-var login_pw = '';
-var  login_phone = '';   
-
-//马上登录
-$('.register-reg .register-to-login').click(function (){ 
-    window.location.href = "../html/login.html";
-});
-
-//登录 提交
-$('.login input[type="button"]').click(function (){
-    console.log('denglu')
-    if( loginPhone && loginPw ){
-         $.ajax({
-             type:'post',
-             url:'../data/php/login.php',
-             data:{login_phone:login_phone,login_pw:login_pw,sql_act:'login'},
-             success: function (str){
-                 console.log('登录成功'+str);
-                if( str.err == '0' )
-                 window.location.href='login.html';
-                 if( str.err == '1' ){
-                    $('.login .login_reg ').css('visibility','visible');
-                    $('.login .login_reg span').html('用户名或密码有误');  
-                 }
-             },
-             error: function (err){
-                 console.log(err);
-                 console.log("登录出错");
-                console.log(login_phone+login_pw);                
-             }
-         });
-    }
-});
-
-
-    $('.login_pw').blur(loginPw);  
-    
-        //登录---密码---判断
-    function loginPw(){
-        console.log( $('.login_pw') );
-        login_pw = $('.login_pw').val();
-       
-        if( login_pw == '' || login_pw == null || login_pw == undefined ){   
-        $('.login .login_reg ').css('visibility','visible');
-        $('.login .login_reg span').html('密码不能为空'); 
-        return false;       
-     }else{   
-         if(login_pw.length < 6){ 
-            // console.log('--<6--'+login_pw.length);
-            $('.login .login_reg ').css('visibility','visible');
-            $('.login .login_reg span').html('密码不能小于6个字符');  
-            return false;
-         }else{
-             if( login_pw.length > 50 ){
-                $('.login .login_reg ').css('visibility','visible');
-                $('.login .login_reg span').html('密码不能大于50个字符'); 
-                return false;
-              } 
-         }
-
-     }
-     $('.login .login_reg ').css('visibility','hidden');
-        return true;
-    }
-
-    //手机号判断
-$('.login_phone').blur(loginPhone);
-    function loginPhone(){
-       login_phone = $(this).val();
-        if( login_phone == '' || login_phone == null || login_phone == undefined ){
-            $('.login .login_reg').css('visibility','visible');
-            $('.login .login_reg span').html('手机号不能为空'); 
-            return false;       
-        }
-       return true;
-    }
 
     </script>
 </body>

@@ -161,7 +161,9 @@ html {
 
 .w_container {
 	width: 980px;
-	margin: 0 auto
+	margin: 0 auto;
+	/* height: 1040px;
+	overflow: hidden; */
 }
 
 .w_container img {
@@ -178,6 +180,7 @@ html {
 
 .w_rank_list {
 	padding: 0 90px;
+	
 }
 
 .w_rank_table {
@@ -188,6 +191,7 @@ html {
 	border-collapse: collapse;
 	border-spacing: 0;
 	text-align: center;
+	
 }
 
 .w_rank_table thead {
@@ -205,6 +209,7 @@ html {
 	display: table-row-group;
 	vertical-align: middle;
 	border-color: inherit;
+	
 }
 
 .w_rank_table thead tr th:nth-child(1) {
@@ -271,7 +276,7 @@ html {
 	line-height: 52px;
 	/* width */
 }
-.w_rank_list a{
+.w_moredata{
 	margin: 0 auto;
     display: block;
     text-align: center;
@@ -293,7 +298,7 @@ html {
 }
 .w_footer_main_logo{
 	width: 160px;
-    height: 47px;
+    height: 70px;
     margin-bottom: 20px;
     overflow: hidden;
 }

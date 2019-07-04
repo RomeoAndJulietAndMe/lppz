@@ -23,9 +23,10 @@ body,html{
 	width: 100%;
 }
 .w_header{
-	/* width: 1269px; */
-	height: 80px;
-	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
 }
 
 .w_text_eg{
@@ -36,6 +37,8 @@ body,html{
 	font-weight: 900;
 	display: flex;
 	justify-content: center;
+	margin-top: 14.43vw;
+	visibility: visible;
 	/* text-align: center; */
 }
 .w_text_ch{
@@ -44,6 +47,7 @@ body,html{
 	margin: 40px auto 82px;
 	/* width: 1269px; */
 	display: flex;
+	visibility: visible;
 	/* text-align: center; */
 	justify-content: center;
 }
@@ -60,7 +64,6 @@ body,html{
 	float: left;
 	flex: 1;
 	padding: 0 37px;
-	
 }
 .w_list li img{
 	width: 100%;

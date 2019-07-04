@@ -1,0 +1,64 @@
+*{box-sizing: border-box;}
+.z-contant{width: 1268px;background: #ffffff;margin: 0 auto;}
+.z-guide{font-size: 27px;color: #e1251b;text-align: center;}
+.z-guide h2{margin-top: 180px;}
+.z-guide p{line-height: 63px;}
+/* 简介 */
+.z-fir{width: 70%;background: #f7f7f7;line-height: 22px;}
+.z-abs{padding: 45px 87px 30px 80px;}
+.z-abs dt{font-size: 24px;color: #333333;margin: 0 0 20px 20px;}
+.z-com{width: 298px;}
+.z-com2{width:292px;margin-left: 88px;}
+.z-abs p{color: #808080;line-height: 24px;}
+.z-sec{width: 25%;background: #f7f7f7;}
+.z-idea dt{font-size: 22px;color: #333333;padding: 40px 0 28px 46px;}
+.z-idea p{color: #808080;margin: 0 0 102px 50px;display: inline-block;}
+/* 支持体系 */
+.z-pow ul li{width: 30%;margin:50px 40px 67px 0;line-height: 28px;}
+.z-powe2 h3{font-size: 18px;color: #e1251b;}
+.z-powe2 p{color: #808080;}
+/* 加盟政策 */
+.join-policty{background: #e1251b;}
+.z-policty{text-align: center;}
+.z-policty h2{font-size: 27px;color: #ffffff;padding-top: 80px;}
+.z-policty p{font-size: 30px;color: #ffffff;margin: 35px 0 58px 0;}
+.join-policty h2{margin-bottom: 86px;margin-left: 30px;color: #ffffff;}
+.join-policty ul li{width: 15%;text-align: center;line-height: 30px;margin-right: 20px;}
+.join-policty ul li h3{font-size: 19px;color: #ffffff;}
+.join-policty ul li p{font-size: 19px;color: #ffffff;margin-bottom: 70px;}
+/* 加盟合作流程 */
+.z-part h3{font-size: 22px;color: #333333;margin-bottom:40px;margin-top: 60px; }
+.z-part ul li{width: 15%;text-align: center;}
+.z-part ul li p{color: #808080;margin: 23px 0 110px 0;}
+/* 加盟合作的小球 */
+.jp-item__num{width: 60px;
+    height: 60px; 
+    font-size: 32px; 
+    line-height: 66px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    background-color: gray;
+    color: #fff;} 
+    /* 加盟申请 */
+.z-join{background: #f7f7f7;}
+.z-tit{text-align: center;}
+ .z-tit h2{font-size: 25px;color: #e1251b;padding: 75px 0 39px 0;}
+ .z-tit p{font-size: 30px;color: #e1251b;}
+ /* 基础信息 */
+ .z-mess{font-size: 20px; color: #333;}
+ .z-list { margin-top: 20px;}
+ .z-list input{width: 15%;}
+ .form-group{width: 15%;margin-right: 50px;height: 50px;font-size: 16px;}
+ /* 个人资源 */
+ .z-person h3{font-size: 18px;color: #333333;margin: 46px 0 26px 0;}
+ .form-radio-input{margin-right: 25px;}
+ /* 具体资源项目  */
+ .form-group3{margin-top: 30px;}
+ .form-group3 textarea{display: inline-block;width: 100%;height: 113px;}
+ /* 投资能力 */
+ .form-group-input{width: 380px;height: 50px;margin-right: 25px;}
+ .form-group4 select{width: 380px;height: 50px;margin-right: 25px;}
+ .z-mess h4{font-size: 12px;color: #808080;margin-top: 27px;}
+ .z-form p{text-align: center;margin-top: 100px;font-size: 25px;}
+

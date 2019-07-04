@@ -6,8 +6,10 @@ html, body {
   width: 100%;
   height: 100%;
   background: palevioletred;
+  position: relative;
 }
 #shou .shou_banner {
+  box-sizing: border-box;
   background: red;
   width: 100%;
   overflow: hidden;
@@ -19,6 +21,7 @@ html, body {
    } */
 }
 #shou .shou_gaoduan {
+  box-sizing: border-box;
   height: 500px;
   background: blue;
   padding-left: 30px;
@@ -28,6 +31,7 @@ html, body {
   background: #ccc;
 }
 #shou .shou_kingdom {
+  box-sizing: border-box;
   background: greenyellow;
   padding: 54px 100px 100px 100px;
   text-align: center;
@@ -84,11 +88,12 @@ html, body {
    top: 0; */
 }
 #shou .shou_zhuanqu {
+  box-sizing: border-box;
   background: pink;
   padding-left: 7.5%;
   padding-right: 7.5%;
   padding-top: 68px;
-  margin-bottom: 38px;
+  padding-bottom: 152px;
 }
 #shou .shou_zhuanqu ul {
   display: flex;
@@ -162,10 +167,6 @@ html, body {
   background: orange;
   overflow: hidden;
   height: 75px;
-}
-#shou .shou_footer iframe {
-  width: 100%;
-  border: 0;
 }
 #shou .c_slider {
   position: fixed;

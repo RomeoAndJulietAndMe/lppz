@@ -167,30 +167,30 @@
     /* background: red; */
     vertical-align: bottom;
 }
-.reg_finish .register_updateYZM{
-    /* display: inline-block; */
-    width: 100px;
-    height: 30px;
-    border: 1px solid red;
-    /* background: yellow; */
-    /* padding-top: 10px; */
-    margin-left: 30px;margin-top: 16px;
+.reg_finish .register_updateYZM{ 
+    width: 120px;
+    height: 40px;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    background: #f2f2f2; 
+    margin-left: 32px;margin-top: 16px;
     text-align: center;
 }
 .register_updateYZM img{
     display: inline-block;
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 40px;
     background: yellow;
 }
 .reg_finish .imgCode{
-    width: 166px;
+    width: 170px;
     height: 42px;
     border: 1px solid #d8d8d8;
     border-radius: 4px;
     font-size: 14px;
     padding: 6px 0 6px 12px;
-    margin-left: 10px;
+    margin-left: 14px;
+    margin-top: 16px;
 }
 .reg_finish input[type="submit"]{
     font-weight: bold;

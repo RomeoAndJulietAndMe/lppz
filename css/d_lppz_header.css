@@ -4,7 +4,7 @@
 .d_filler {
 	height: 80px;
 }
-.d_eader_wrap {
+.d_eader_wrap { 
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -12,7 +12,7 @@
 	background: #fff;
 	z-index: 100;
 }
-.d_header {
+.d_header { 
 	position: relative;
 	height: 80px;
 	line-height: 80px;

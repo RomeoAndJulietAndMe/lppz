@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* 头部导航区域 */
+.l_header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+/* 内容区整体样式 */
+.l_container{
+    margin-top: 80px;
+    padding: 95px 20px;
+    overflow: hidden;
+}
+
+/* 坚果类标题及轮播图 */
+    /* 坚果类标题 */
+.l_nuts .nutsTitle{
+    font-size: 40px;
+    color: #e1251b;
+}
+.l_nuts .nutsTitle .en{
+    font-weight: 900;
+    margin: 0 30px 0 23px;
+    font-size: 45px;
+}
+    /* 坚果类图片轮播样式 */
+.l_nuts .nutsWraper{
+    overflow: hidden;
+    width: 100%;
+}
+.l_nuts .nutsSlide{
+    width: 5000px;
+    overflow: hidden;
+}
+.l_nuts .nutsSlide li{
+    float: left;
+    margin: 50px 33px 0;
+    text-align: center;
+}
+.l_nuts .nutsSlide li a img{
+    width: 238px;
+    height: 251px;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.1);
+}
+.l_nuts .nutsSlide li div{
+    font-size: 12px;
+    color: #333;
+    margin: 40px 0;
+}
+
+/* 海味零食类标题及轮播图 */
+   /* 海味零食类标题 */
+.l_seafood .seafoodTitle{
+    font-size: 40px;
+    color: #e1251b;
+}
+.l_seafood .seafoodTitle .en{
+    font-weight: 900;
+    margin: 0 30px 0 23px;
+    font-size: 45px;
+}
+    /* 海味零食类图片轮播样式 */
+.l_seafood .seafoodWraper{
+    overflow: hidden;
+    width: 100%;
+}
+.l_seafood .seafoodSlide{
+    width: 5000px;
+    overflow: hidden;
+}
+.l_seafood .seafoodSlide li{
+    float: left;
+    margin: 50px 33px 0;
+    text-align: center;
+}
+.l_seafood .seafoodSlide li a img{
+    width: 238px;
+    height: 251px;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.1);
+}
+.l_seafood .seafoodSlide li div{
+    font-size: 12px;
+    color: #333;
+    margin: 40px 0;
+}
+
+/* 肉类零食类标题及轮播图 */
+    /* 肉类零食类标题 */
+.l_meat .meatTitle{
+    font-size: 40px;
+    color: #e1251b;
+}
+.l_meat .meatTitle .en{
+    font-weight: 900;
+    margin: 0 30px 0 23px;
+    font-size: 45px;
+}
+    /* 肉类零食类图片轮播样式 */
+.l_meat .meatWraper{
+    overflow: hidden;
+    width: 100%;
+}
+.l_meat .meatSlide{
+    width: 5000px;
+    overflow: hidden;
+}
+.l_meat .meatSlide li{
+    float: left;
+    margin: 50px 33px 0;
+    text-align: center;
+}
+.l_meat .meatSlide li a img{
+    width: 238px;
+    height: 251px;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.1);
+}
+.l_meat .meatSlide li div{
+    font-size: 12px;
+    color: #333;
+    margin: 40px 0;
+}
+
+/* 炒货系列标题及轮播图 */
+    /* 炒货系列标题 */
+.l_roasted .roastedTitle{
+    font-size: 40px;
+    color: #e1251b;
+}
+.l_roasted .roastedTitle .en{
+    font-weight: 900;
+    margin: 0 30px 0 23px;
+    font-size: 45px;
+}
+    /* 炒货系列图片轮播样式 */
+.l_roasted .roastedWraper{
+    overflow: hidden;
+    width: 100%;
+}
+.l_roasted .roastedSlide{
+    width: 5000px;
+    overflow: hidden;
+}
+.l_roasted .roastedSlide li{
+    float: left;
+    margin: 50px 33px 0;
+    text-align: center;
+}
+.l_roasted .roastedSlide li a img{
+    width: 238px;
+    height: 251px;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.1);
+}
+.l_roasted .roastedSlide li div{
+    font-size: 12px;
+    color: #333;
+    margin: 40px 0;
+}
+
+/* 红枣干果类标题及轮播图 */
+    /* 红枣干果类标题 */
+.l_redDates .redDatesTitle{
+    font-size: 40px;
+    color: #e1251b;
+}
+.l_redDates .redDatesTitle .en{
+    font-weight: 900;
+    margin: 0 30px 0 23px;
+    font-size: 45px;
+}
+    /* 红枣干果类图片轮播样式 */
+.l_redDates .redDatesWraper{
+    overflow: hidden;
+    width: 100%;
+}
+.l_redDates .redDatesSlide{
+    width: 5000px;
+    overflow: hidden;
+}
+.l_redDates .redDatesSlide li{
+    float: left;
+    margin: 50px 33px 0;
+    text-align: center;
+}
+.l_redDates .redDatesSlide li a img{
+    width: 238px;
+    height: 251px;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.1);
+}
+.l_redDates .redDatesSlide li div{
+    font-size: 12px;
+    color: #333;
+    margin: 40px 0;
+}
+    
+/* 话梅果脯类标题及轮播图 */
+    /* 话梅果脯类标题 */
+.l_plums .plumsTitle{
+    font-size: 40px;
+    color: #e1251b;
+}
+.l_plums .plumsTitle .en{
+    font-weight: 900;
+    margin: 0 30px 0 23px;
+    font-size: 45px;
+}
+    /* 话梅果铺类图片轮播样式 */
+.l_plums .plumsWraper{
+    overflow: hidden;
+    width: 100%;
+}
+.l_plums .plumsSlide{
+    width: 5000px;
+    overflow: hidden;
+}
+.l_plums .plumsSlide li{
+    float: left;
+    margin: 50px 33px 0;
+    text-align: center;
+}
+.l_plums .plumsSlide li a img{
+    width: 238px;
+    height: 251px;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.1);
+}
+.l_plums .plumsSlide li div{
+    font-size: 12px;
+    color: #333;
+    margin: 40px 0;
+}
+
+/* 素食山珍类标题及轮播图 */
+    /* 素食山珍类标题 */
+.l_snacks .snacksTitle{
+    font-size: 40px;
+    color: #e1251b;
+}
+.l_snacks .snacksTitle .en{
+    font-weight: 900;
+    margin: 0 30px 0 23px;
+    font-size: 45px;
+}
+    /* 素食山珍类图片轮播样式 */
+.l_snacks .snacksWraper{
+    overflow: hidden;
+    width: 100%;
+}
+.l_snacks .snacksSlide{
+    width: 5000px;
+    overflow: hidden;
+}
+.l_snacks .snacksSlide li{
+    float: left;
+    margin: 50px 33px 0;
+    text-align: center;
+}
+.l_snacks .snacksSlide li a img{
+    width: 238px;
+    height: 251px;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.1);
+}
+.l_snacks .snacksSlide li div{
+    font-size: 12px;
+    color: #333;
+    margin: 40px 0;
+}
+

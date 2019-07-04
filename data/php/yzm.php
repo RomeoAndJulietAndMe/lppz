@@ -4,7 +4,7 @@ header('Content-type:text/html');
 //验证码text内容
 $text = array('1','0','2','3','4','5','6','7','8','9');
 $index_text='';
-//建议放到前端
+
 for($i=0; $i<4; $i++){
     $index_text.=$text[rand(0,9)];
 }
@@ -20,24 +20,24 @@ for($i=0; $i<4; $i++){
 
 
 // 创建真彩图像
-$xian = imagecreatetruecolor(100,30);
+$xian = imagecreatetruecolor(120,40);
  
 imagefill($xian,0,0,setColorLight($xian));
 
 //字体内容
-imagettftext($xian,18,mt_rand(-5,5),rand(0,30),rand(14,26),setColorDark($xian),'../../css/font/segoescb.ttf',$index_text);
+imagettftext($xian,18,mt_rand(-5,5),rand(0,30),rand(14,30),setColorDark($xian),'../../css/font/segoesc.ttf',$index_text);
 
 //控制线条的粗细
- imagesetthickness($xian,rand(1,2));
+ imagesetthickness($xian,rand(2,4));
 for($j=0;$j<5;$j++){
     //线条随机起来
-    imageline($xian, mt_rand(0,50),mt_rand(0,15),mt_rand(51,100),mt_rand(15,30),setColorLight($xian));
+    imageline($xian, mt_rand(0,50),mt_rand(0,15),mt_rand(51,120),mt_rand(15,40),setColorLight($xian));
 } 
 
 //画点
 for($j=0;$j<100;$j++){
     //随机起来
-    imagesetpixel($xian, mt_rand(0,100),mt_rand(0,30),setColorLight($xian));
+    imagesetpixel($xian, mt_rand(0,120),mt_rand(0,40),setColorLight($xian));
 }
 
 

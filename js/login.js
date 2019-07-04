@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // require('./jquery-1.8.3');
 
 //账号注册
@@ -26,7 +26,7 @@ $('.register input[type="button"]').click(function(){
     }
 });
 
-=======
+
 /* //马上登录
 $('.register-reg .register-to-login').click(function (){ 
     window.location.href = "../html/login.html";
@@ -100,4 +100,4 @@ function registerPh(){
 //    login_reg.css('visibility','hidden');
    return true;
 }
->>>>>>> herman
+

@@ -14,10 +14,10 @@
 		var $this = $(this);
 		var pBottom = $this.find("p");
 		var pHeight = pBottom.css("height");
-		$this.parent().toggle(function () {
-			$(this).find("p").stop().animate({height: 0});
+		$this.parent().children("a").toggle(function () {
+			$(this).parent().find("p").stop().animate({height: 0});
 		},function () {
-			$(this).find("p").stop().animate({height: pHeight});
+			$(this).parent().find("p").stop().animate({height: pHeight});
 		})
 	})
 	$(".d_follow_select li:nth-child(3)").hover(function () {//微信二维码的显示隐藏

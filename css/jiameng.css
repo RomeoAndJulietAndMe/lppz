@@ -2,15 +2,17 @@
 .z-contant{width: 1268px;background: #ffffff;margin: 0 auto;}
 .z-guide{font-size: 27px;color: #e1251b;text-align: center;}
 .z-guide h2{margin-top: 180px;}
-.z-guide p{line-height: 63px;}
+.z-guide p{line-height: 63px;margin-bottom: 60px;}
 /* 简介 */
 .z-fir{width: 70%;background: #f7f7f7;line-height: 22px;}
+.z-fir:hover{background: #e1251b;}
 .z-abs{padding: 45px 87px 30px 80px;}
 .z-abs dt{font-size: 24px;color: #333333;margin: 0 0 20px 20px;}
 .z-com{width: 298px;}
 .z-com2{width:292px;margin-left: 88px;}
 .z-abs p{color: #808080;line-height: 24px;}
 .z-sec{width: 25%;background: #f7f7f7;}
+.z-sec:hover{background: #e1251b;}
 .z-idea dt{font-size: 22px;color: #333333;padding: 40px 0 28px 46px;}
 .z-idea p{color: #808080;margin: 0 0 102px 50px;display: inline-block;}
 /* 支持体系 */
@@ -29,6 +31,7 @@
 /* 加盟合作流程 */
 .z-part h3{font-size: 22px;color: #333333;margin-bottom:40px;margin-top: 60px; }
 .z-part ul li{width: 15%;text-align: center;}
+.z-part ul li .jp-item__num:hover{background: #e1251b;}
 .z-part ul li p{color: #808080;margin: 23px 0 110px 0;}
 /* 加盟合作的小球 */
 .jp-item__num{width: 60px;

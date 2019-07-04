@@ -11,9 +11,12 @@ html, body {
   background: red;
   width: 100%;
   overflow: hidden;
-}
-#shou .shou_banner .shou_banner_img {
-  width: 300%;
+  /*  .shou_banner_img{
+       width: 3*100%;
+       img{
+           // width: 100%;
+       }
+   } */
 }
 #shou .shou_gaoduan {
   height: 500px;
@@ -26,21 +29,133 @@ html, body {
 }
 #shou .shou_kingdom {
   background: greenyellow;
+  padding: 54px 100px 100px 100px;
+  text-align: center;
+  color: #e1251b;
+}
+#shou .shou_kingdom h2 {
+  font: 900 36px/1 "AvenirLTStd";
+}
+#shou .shou_kingdom h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+#shou .shou_kingdom .shou_kingdom_imgs .swiper-container {
+  position: relative;
+}
+#shou .shou_kingdom .shou_kingdom_imgs .swiper-container .swiper-wrapper .swiper-slide {
+  text-align: center;
+}
+#shou .shou_kingdom .shou_kingdom_imgs .swiper-container .swiper-wrapper .swiper-slide a {
+  display: block;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+#shou .shou_kingdom .shou_kingdom_imgs .swiper-container .swiper-wrapper .swiper-slide a p {
+  width: 100%;
   height: 50px;
+  line-height: 60px;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  background: url(../img/active_bg.png) no-repeat;
+  background-size: 100% 100%;
+  transition: display 1s;
+}
+#shou .shou_kingdom .shou_kingdom_imgs .swiper-container .swiper-wrapper .swiper-slide a img {
+  width: 100%;
+}
+#shou .shou_kingdom .shou_kingdom_imgs .swiper-container .swiper-wrapper .swiper-slide a img:hover {
+  transition: all 1s;
+  transform: scale(1.1);
+}
+#shou .shou_kingdom .shou_kingdom_imgs .swiper-container .swiper-button-prev {
+  opacity: 1;
+  /*  position: absolute;
+   left: 0;
+   top: 0; */
 }
 #shou .shou_zhuanqu {
   background: pink;
-  height: 50px;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  padding-top: 68px;
+  margin-bottom: 38px;
+}
+#shou .shou_zhuanqu ul {
+  display: flex;
+  justify-content: space-between;
+}
+#shou .shou_zhuanqu ul li {
+  box-sizing: border-box;
+  float: left;
+  flex: 1;
+  padding: 30px 30px;
+  background: #f2f2f2;
+}
+#shou .shou_zhuanqu ul li a {
+  width: 100%;
+  height: 328px;
+  display: inline-block;
+  color: gray;
+  position: relative;
+}
+#shou .shou_zhuanqu ul li a h1 {
+  font: 900 24px/1 "AvenirLTStd";
+  text-transform: uppercase;
+}
+#shou .shou_zhuanqu ul li a h6 {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 36px;
+}
+#shou .shou_zhuanqu ul li a h5 {
+  font-size: 16px;
+  font-weight: normal;
+}
+#shou .shou_zhuanqu ul li a p {
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 28px;
+}
+#shou .shou_zhuanqu ul li a h4 {
+  font-weight: normal;
+  font-size: 44px;
+  position: absolute;
+  bottom: 0;
+}
+#shou .shou_zhuanqu ul li:nth-child(2) {
+  margin-left: 12px;
+}
+#shou .shou_zhuanqu ul li:nth-child(3) {
+  margin-left: 12px;
+}
+#shou .shou_zhuanqu ul li:nth-child(3) h4 {
+  font-weight: bolder;
+}
+#shou .shou_zhuanqu ul li:nth-child(4) {
+  margin-left: 12px;
+}
+#shou .shou_zhuanqu ul li:hover {
+  background-color: #e1251b;
+  transition: all 1s;
+}
+#shou .shou_zhuanqu ul li:hover a {
+  color: #fff;
 }
 #shou .shou_header {
   width: 100%;
   background: yellow;
   position: fixed;
-}
-#shou .shou_header iframe {
-  width: 100%;
-  border: 0;
-  position: absolute;
 }
 #shou .shou_footer {
   width: 100%;
@@ -51,4 +166,33 @@ html, body {
 #shou .shou_footer iframe {
   width: 100%;
   border: 0;
+}
+#shou .c_slider {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  z-index: 999;
+  background: yellow;
+}
+#shou .c_slider .c_slider_bar {
+  position: relative;
+}
+#shou .c_slider .c_slider_bar span {
+  display: inline-block;
+  position: relative;
+  height: 24px;
+  border-left: 1px dashed #e1251b;
+  text-align: center;
+  left: 50%;
+  top: 2px;
+}
+#shou .c_slider a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #e1251b;
+  border-radius: 50%;
+  /* &:hover{
+      background: #e1251b;
+  } */
 }

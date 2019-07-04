@@ -5,23 +5,12 @@
 				var $this = $(this);
 				addH = isNaN(parseInt(addH)) ? 0 : parseInt(addH);
 				var win = $(window);
-<<<<<<< HEAD
-				var isInView = false;
-=======
 				var isInView = false;//元素是否在视口内
->>>>>>> 717feee03a1636c0bb098d235b82aa03612d7a0f
 				$this.nowMove = function () {
 					//upView > 0 表示目标元素在视口下边缘的上方
 					var upView = (win.scrollTop() + win.height()) - ($this.offset().top + addH);
 					//downView > 0 表示目标元素在视口上边缘的下方
 					var downView = $this.offset().top + $this[0].offsetHeight - addH - win.scrollTop();
-<<<<<<< HEAD
-					if (upView > 0 && downView > 0 && !isInView) {//元素在窗口内可见
-						isInView = true;
-						callBack.call($this);
-					}else if (!(upView > 0 && downView > 0) && isInView && needRepeat) {
-						isInView = false;
-=======
 					if (upView > 0 && downView > 0 && !isInView) {//元素在视口内可见
 						isInView = true;
 						callBack.call($this);
@@ -30,7 +19,6 @@
 						if (typeof needRepeat != "boolean") {
 							needRepeat.call($this);
 						}
->>>>>>> 717feee03a1636c0bb098d235b82aa03612d7a0f
 					}
 				}
 				$this.nowMove ();

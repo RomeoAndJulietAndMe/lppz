@@ -43,8 +43,8 @@
 	$(".d_big_select").each(function () {//小窗口时缩放下拉菜单
 		var $this = $(this);
 		var selH = parseInt($this.find("a").css("height")) * $this.find("a").size() + "px";
-		$this.parent().toggle(function () {
-			$(this).toggleClass("d_active");
+		$this.parent().children("a").toggle(function () {
+			$this.parent().toggleClass("d_active");
 			$this.css("height", "0").animate({height: selH});
 		},function () {
 			$this.animate({height: "0"},function () {

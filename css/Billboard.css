@@ -131,7 +131,9 @@ html {
 	border-top: 3px solid #fff;
 	border-bottom: 3px solid #fff;
 }
-
+.w_header_main li:nth-child(5) a{
+	border-bottom: 3px solid #e94715;
+}
 .w_header_main li a:hover {
 	border-bottom: 3px solid #e94715;
 }
@@ -162,16 +164,36 @@ html {
 .w_container {
 	width: 980px;
 	margin: 0 auto;
-	/* height: 1040px;
-	overflow: hidden; */
-}
+	position: relative;
 
-.w_container img {
+}
+.w_zhaopian{
 	width: 100%;
 	height: auto;
 	vertical-align: top;
 }
-
+.w_medal1{
+	width: 28px;
+	height: 36px;
+	position: absolute;
+	top: 167px;
+	left: 136px;
+}
+.w_medal2{
+	width: 28px;
+	height: 36px;
+	position: absolute;
+	top: 218px;
+	z-index: 2;
+	left: 136px;
+}
+.w_medal3{
+	width: 28px;
+	height: 36px;
+	position: absolute;
+	top: 272px;
+	left: 136px;
+}
 .w_rank_banner {
 	height: 52px;
 	line-height: 50px;
@@ -255,32 +277,14 @@ html {
 	display: block;
 	text-align: center
 }
-.w_rank_table .w_rank_data tr:nth-child(1) td em{
-	background: url(../img/elf.png) 46px -38px no-repeat;
-	display: block;
-	height: 52px;
-	line-height: 52px;
-	/* width */
-}
-.w_rank_table .w_rank_data tr:nth-child(2) td em{
-	background: url(../img/elf.png) 46px -155px no-repeat;
-	display: block;
-	height: 52px;
-	line-height: 52px;
-	/* width */
-}
-.w_rank_table .w_rank_data tr:nth-child(3) td em{
-	background: url(../img/elf.png) 46px -271px no-repeat;
-	display: block;
-	height: 52px;
-	line-height: 52px;
-	/* width */
-}
+
 .w_moredata{
 	margin: 0 auto;
     display: block;
-    text-align: center;
+	text-align: center;
+	cursor: pointer;
 }
+
 .w_footer{
 	width: 100%;
     margin-top: 20px;

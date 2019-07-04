@@ -51,7 +51,7 @@ function registerPh(){
     var phone = $('.register input[type="text"]').attr('value');;
     console.log("inputpanudan"+typeof phone);
     console.log(phone);
-   var login_reg =  $('.login_reg');
+   var login_reg =  $('.register .login_reg');
    var login_reg_span = $('.login_reg span');
    var phoneReg = /^[1][3-9][0-9]{9}$/;
    console.log('正则'+ phoneReg.test(phone) );
@@ -64,10 +64,13 @@ function registerPh(){
         login_reg.css('visibility','visible');       
          login_reg_span.html("手机号码格式不正确");   
          return false; 
+       }else{
+        login_reg.css('visibility','hidden');
+        return true;
        }
        
    }
    localStorage.setItem('register_phone',phone);
-//    login_reg.css('visibility','hidden');
+   login_reg.css('visibility','hidden');  
    return true;
 }

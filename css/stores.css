@@ -9,12 +9,13 @@
 }
 
 
-.l_container{
+/* .l_container{
     margin-top: 80px;
-}
+} */
+
 /* 广告图banner区域 */
 .l_banner{
-    background: url(../img/stores_banner.jpg) no-repeat center;
+    background: url(../img/stores_banner.jpg) no-repeat center center;
     background-size: cover;
     height: 296px;
 }
@@ -23,6 +24,7 @@
 .l_content{
     padding: 0 40px;
 }
+
 /* 中文和英文大标题，全国门店 */
 .l_title{
     text-align: center;
@@ -38,6 +40,7 @@
     color: #e1251b;
     font-size: 30px;
 }
+
 /* 地图的搜索框区域 */
 .l_search{
     height: 90px;
@@ -86,6 +89,7 @@
     margin-left: 10px;
     cursor: pointer;
 }
+
 /* 链接地图API区域 */
 .l_map{
     height: 600px;
@@ -94,12 +98,12 @@
 
 /* 地图搜索结果显示区域 */
 .l_info{
-    min-height: 120px;
+    min-height: 100px;
 }
 .info_list{
     margin-left: -12px;
     margin-right: -12px;
-    /* display: none; */
+    display: none;
 }
 .info_list li{
     width: 33.333%;

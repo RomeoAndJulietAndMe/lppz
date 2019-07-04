@@ -14,7 +14,6 @@
    text-align: center;
    padding-top: 90px;
 }
-
 /*login-register是 login 和 register部分公共部分 */
 .login-register{
     width: 370px;  
@@ -82,12 +81,6 @@
     height:26px; 
     visibility: hidden;
 }
-.login_reg{
-    visibility: hidden;
-   text-align: left !important;
-   height: 36px;
-   line-height: 36px;
- }
 .login_reg i{
     display: inline-block;
     width: 14px;

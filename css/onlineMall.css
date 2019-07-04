@@ -1,8 +1,17 @@
 @charset "utf-8";
 
-.l_container{
-    margin-top: 80px;
+/* 头部导航区域 */
+.l_header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
 }
+
+/* .l_container{
+    margin-top: 80px;
+} */
+
 /* 广告图banner区域 */
 .l_banner{
     background: url(../img/onlineMall_banner.jpg) no-repeat center;
@@ -14,10 +23,11 @@
 .l_content{
     padding: 0 40px;
 }
+
 /* 中文和英文大标题，线上商城 */
 .l_title{
     text-align: center;
-    padding: 79px 0 58px 0;
+    padding: 79px 0 74px 0;
 }
 .l_title h1{
     line-height: 63px;
@@ -29,9 +39,10 @@
     color: #e1251b;
     font-size: 30px;
 }
+
 /* 商城链接入口的样式 */
 .l_links{
-    height: 450px;
+    height: 433px;
     display: flex;
     justify-content: space-between;
 }

@@ -15,6 +15,8 @@
 
 
 
+
+
 //swiper轮播
 var mySwiper = new Swiper ('.swiper-container', {
 	//  direction: 'verticalhb', // 垂直切换选项
@@ -54,16 +56,30 @@ var mySwiper = new Swiper ('.swiper-container', {
 
 
 //底部轮播图中，加变减，线条变长短，圆圈变红和灰色
+		// $('.x-footer').each(function(){
+			//var $this=$(this);	
 		 $('.x-jia i').toggle(function(){
-		 		$('.x-jia i').html('-');
-		 		$('.x-footer-bottom').animate({width:0},1000,"swing",function(){})
-					$('.x-footer-left').append("<style>.x-footer-left:after{background:red}</style>");
+				 $(this).html('-');
+		 		$(this).parent().next().animate({width:0},1000,"swing",function(){})
+				 $(this).parent().parent().prev().addClass("x-after");
 					
 		 },function(){
 		 	$('.x-jia i').html('+');  
-		 	$('.x-footer-bottom').animate({width:296},1000,"swing",function(){})
-		 	 $('.x-footer-left').append("<style>.x-footer-left:after{background:#b2b2b2}</style>");
+		 	$(this).parent().next().animate({width:296},1000,"swing",function(){})
+			 $(this).parent().parent().prev().removeClass("x-after");
 		 })
+		// })
+
+		//  $('.x-footer').each(function(){
+		// 	var $this=$(this);
+			
+		// 	$this.toggle(function(){
+		// 			$this.html('-');
+		// 	})
+
+		//  })
+
+
 	//轮播图中，鼠标移入移出改变颜色			
 		//  $('.x-footer-one').hover(function(){
 		// 	 $('.x-footer-one h3').css('color','red');
@@ -91,14 +107,15 @@ var mySwiper = new Swiper ('.swiper-container', {
 					})
 					$this.find('.x-footer-left').css('border','1px solid red');
 					// $this.find('.x-footer-left').append("<style>.x-footer-left:before{background:red}</style>");
+					$this.find('.x-footer-left').addClass("x-before")
 			},function(){
 					$this.find('h3').css('color','#b2b2b2');
 					$this.find('span').css({'background':'#b2b2b2  url(../img/a2019.jpg)	no-repeat center center',
 					
 					})
 					$this.find('.x-footer-left').css('border','1px solid #b2b2b2');
-					// $this.find('.x-footer-left').append("<style>.x-footer-left:before{background:#b2b2b2}</style>");
-
+					 //$this.find('.x-footer-left').append("<style>.x-footer-left:before{background:#b2b2b2}</style>");
+					 $this.find('.x-footer-left').removeClass("x-before")
 			})
 		})
 

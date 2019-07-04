@@ -52,3 +52,192 @@ html, body {
   width: 100%;
   border: 0;
 }
+.c_high{
+  /* position: relative; */
+  height: 100vh;
+  overflow: hidden;
+  padding-top:19.vh; 
+}
+.c_high_main{
+  /* position: relative; */
+  display: flex;
+  height: 100vh;
+  margin: 0 7.5%;
+}
+.c_high_main_left{
+  flex: 1;
+  padding-right: 30px;
+  text-align: left;
+  position: relative;
+}
+.c_high_main_left::before{
+  position: absolute;
+  left: 130px;
+  right: 0;
+  content: "";
+  top: 0;
+  bottom: 45px;
+  background-color: #f7f7f7;
+  display: block;
+}
+.c_figure{
+  height: 380px;
+  width: 440px;
+  overflow: hidden;
+  position: absolute;
+  top: 32.7%;
+  left: 65px;
+  overflow: hidden;
+}
+.c_figure img{
+  width: 100%;
+  height: 100%;
+  transition: all 1.5s;
+}
+.c_figure img:hover{
+  transform: scale(1.1,1.1);
+  cursor: pointer;
+}
+.c_txt{
+  position: absolute;
+  bottom: 83px;
+  display: block;
+  padding: 0 20px;
+  width: 206px;
+  height: 290px;
+  background-color: #e1251b; 
+}
+.c_txt_red{
+    font-size: 14px;
+    line-height: 2;
+    color: #fff;
+    font-weight: 300;
+    position: absolute;
+    top: 25%;
+    left: 20px;
+    right: 20px;
+}
+.c_txt_red p{
+  height: 6em;
+}
+.c_txt_red_line{
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 2px;
+  background-color: #fff;
+}
+.c_high_main_right{
+  flex: 1;
+  padding-left: 30px;
+  text-align: right;
+  position: relative;
+}
+.c_yinying{
+  opacity: .2;
+  position: absolute;
+  top: 0;
+  font: 700 54px/1 "DIN";
+  color: #d8d8d8;
+  z-index: 10;
+}
+.c_yinying_ch{
+
+  position: absolute;
+  top: 0;
+  color: #e1251b;
+  line-height: 2;
+  font-weight: 400;
+}
+.c_yinying_ch h2{
+  margin-top: 1.3em;
+  margin-bottom: .66667em;
+  font-weight: 100;
+}
+.c_yinying_ch p{
+  font-size: 1.04167vw;
+}
+.link-left{
+  position: absolute;
+  bottom: 10px;
+  font: 300 12px/2 "AvenirLTStd";
+  color: #fff;
+  z-index: 20;
+}
+.c_high_main_right::before{
+  position: absolute;
+  right: 130px;
+  left: 0;
+  content: "";
+  top: 0;
+  bottom: 45px;
+  background-color: #f7f7f7;
+  display: block;
+}
+.c_figure_right{
+  height: 380px;
+  width: 440px;
+  overflow: hidden;
+  position: absolute;
+  top: 32.7%;
+}
+.link-right{
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font: 300 12px/2 "AvenirLTStd";
+  color: #fff;
+  z-index: 20;
+}
+.c_figure_right img{
+  width: 100%;
+  height: 100%;
+  transition: all 1.5s;
+}
+.c_figure_right img:hover{
+  transform: scale(1.1,1.1);
+  cursor: pointer;
+}
+.c_txt_right{
+  position: absolute;
+  bottom: 83px;
+  display: block;
+  padding: 0 20px;
+  width: 200px;
+  height: 290px;
+  background-color: #e1251b; 
+  left: 304px;
+}
+.c_txt_red_right{
+    font-size: 14px;
+    line-height: 2;
+    color: #fff;
+    font-weight: 300;
+    position: absolute;
+    top: 25%;
+    left: 20px;
+    right: 20px;
+}
+.c_yinying_right{
+  opacity: .2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font: 700 54px/1 "DIN";
+  color: #d8d8d8;
+  z-index: 10;
+
+}
+.c_yinying_ch_right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #e1251b;
+  line-height: 2;
+  font-weight: 400;
+}
+.c_yinying_ch_right h2{
+  margin-top: 1.3em;
+  margin-bottom: .66667em;
+  font-weight: 100;
+}

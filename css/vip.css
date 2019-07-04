@@ -1,0 +1,376 @@
+/* CSS Document */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img{
+	padding:0; margin:0;	
+}
+body { color:#333; font:12px/20px "微软雅黑","Arial Narrow",HELVETICA; background:#fff;}
+img,fieldset{ border:0;}
+a{ text-decoration:none; color:#333;}
+a:hover{ color:#F00;}
+ul li{ list-style:none;}
+h1,h2,h3,h4,b,strong{ font-weight:normal;}
+em,i{ font-style:normal;}
+input{ outline:none;}
+table{border-collapse:collapse;border-spacing:0;}
+.clearfix:after{
+	content:"."; display:block; font-size:0; height:0; visibility:hidden; clear:both; overflow:hidden;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	/* background-color: blue; */
+}
+.w_entirety{
+	width: 100%;
+}
+.w_header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.w_text_eg{
+	font-size: 34px;
+	color: #e1251b;
+	margin: 100px auto 0px;
+	/* width: 1269px; */
+	font-weight: 900;
+	display: flex;
+	justify-content: center;
+	margin-top: 14.43vw;
+	visibility: visible;
+	/* text-align: center; */
+}
+.w_text_ch{
+	font-size: 30px;
+	color: #e1251b;
+	margin: 40px auto 82px;
+	/* width: 1269px; */
+	display: flex;
+	visibility: visible;
+	/* text-align: center; */
+	justify-content: center;
+}
+
+/* 以下内容为图片位置的布局	*/
+
+.w_list{
+	height: 420px;
+	margin: 70px auto 0;
+	display: flex;
+}
+
+.w_list li{
+	float: left;
+	flex: 1;
+	padding: 0 37px;
+}
+.w_list li img{
+	width: 100%;
+}
+.w_list h3{
+	font-size: 26px;
+	color: #e1251b;
+	margin-top:33px;
+}
+.w_card_ex{
+	margin-top: 1em;
+    font-size: 14px;
+    line-height: 24px;
+    color: gray
+}
+.w_remark_d{
+	display: flex;
+	justify-content: center;
+}
+
+/* 以下是备注信息的样式*/
+
+.w_remark{
+	padding: 20px 20px 15px;
+    color: gray;
+	background-color: #f7f7f7;
+	/* margin: 0 auto; */
+}
+.w_remark h4{
+	font-size: 16px;
+    margin-bottom: 10px;
+}
+.w_remark p{
+	font-size: 14px;
+	line-height: 24px;
+	min-width: 1146px;
+}
+
+/*以下是会员评定标准的样式*/
+
+.w_standard{
+	margin-top: 8.1vw;
+}
+.w_standard h2{
+	font-weight: 900;
+	font-size:34px;
+	display: flex;
+	color: #e1251b;
+	justify-content: center;
+}
+.w_standard p{
+	display: flex;
+	color: #e1251b;
+	justify-content: center;
+	margin-top: 1em;
+    font-size: 30px;
+    letter-spacing: .06em;
+}
+
+.w_member{
+	margin-top: 5.4vw;
+	display: flex;
+	/* justify-content: center; */
+	/* justify-content: space-around; */
+	padding: 0 38px;
+	/* box-sizing: border-box; */
+
+}
+
+/*表格左边部分样式*/
+.w_member_left{
+	flex: 1;
+}
+.w_member_table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+}
+.w_member_table th{
+	background-color: #e1251b
+}
+.w_member_table thead th{
+	font-size: 20px;
+	line-height: 70px;
+	background-color: #e1251b;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+}
+.w_member_table tbody tr{
+	font-size: 20px;
+    color: #333;
+}
+.w_member_table tbody td{
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+}
+.w_member_table tbody td span{
+	display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #e1251b;
+}
+.w_member_table tbody tr:nth-child(2n+1){
+	background-color: #f7f7f7;
+}
+
+/*表格右边部分的样式*/
+.w_member_right{
+	flex: 3;
+	display: flex;
+	/* box-sizing: border-box; */
+	/* border-left:solid 1px #fff;  */
+}
+.w_member_first{
+	flex: 1;
+}
+
+/*以下为会员卡信息提示*/
+.w_member_tip_d{
+	display: flex;
+	justify-content: center;
+	padding: 0 38px;
+}
+.w_member_tip{
+	flex: 1;
+	padding: 20px 20px 15px;
+    color: gray;
+	background-color: #f7f7f7;
+	margin-top: 4vw;
+}
+.w_member_tip h4{
+	font-size: 16px;
+    margin-bottom: 10px;
+}
+.w_member_tip p{
+	font-size: 14px;
+    line-height: 24px;
+}
+
+/*以下是会员积分规则*/
+.w_integral{
+	margin-top: 7.43vw;
+}
+.w_integral h2{
+	font-size: 34px;
+	font-weight: 900;
+	color: #e1251b;
+	display: flex;
+	justify-content: center;
+}
+.w_integral p{
+	margin-top: 1em;
+    font-size: 30px;
+    letter-spacing: .06em;
+	display: flex;
+	color: #e1251b;
+	justify-content: center;
+}
+
+.w_integral_vip_d{
+	display: flex;
+	justify-content: start;
+	padding: 0 38px;
+}
+.w_integral_vip{
+	position: relative;
+    padding-left: 20px;
+    font-size: 24px;
+    line-height: 2;
+    letter-spacing: .06em;
+	color: #333;
+	margin-top: 30px;
+}
+.w_integral_vip::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -6px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #e1251b;
+}
+/*以下是圆形球的样式*/
+.w_ball{
+	display: flex;
+	padding: 0 38px;
+	justify-content: space-between;
+	margin-top: 30px;
+	
+}
+
+.w_ball li{
+	position: relative;
+
+}
+.w_ball_border{
+	width: 260px;
+	height: 260px;
+	border: 2px solid #e1251b;
+	border-radius: 50%;
+}
+.w_ball_num{
+	position: absolute;
+	bottom: 50%;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font: 700 70px/1 "AvenirLTStd";
+	color: #e1251b;
+	margin-bottom: 10px;
+}
+.w_ball_dis{
+	position: absolute;
+	top: 50%;
+	right: 15%;
+	left: 15%;
+	font-size: 14px;
+	line-height: 24px;
+	color: gray;
+	text-align: center;
+}
+.w_ball_dis p{
+	font-size: 14px;
+	line-height: 24px;
+}
+.w_guize{
+	margin-top: 6.08vw;
+}
+.w_guize_two{
+	position: relative;
+    padding-left: 20px;
+    font-size: 24px;
+    line-height: 2;
+    letter-spacing: .06em;
+	color: #333;
+	margin-top:0; 
+}
+
+/*积分会员规则的三个放开样式*/
+.w_list_integral{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 38px;
+	margin: 30px 0 0;
+	
+}
+.w_list_integral li{
+	flex: 1;
+	padding: 0 15px 40px ;
+}
+.w_list_integral li:nth-child(1){
+	padding: 0 15px 40px 0;
+}
+.w_list_integral li:nth-child(3){
+	padding: 0 0px 40px 15px;
+}
+.w_list_integral_txt{
+	position: relative;
+	z-index: 1;
+	padding: 30px 40px;
+	margin: 0 0 40px  0;
+	font-size: 14px;
+	line-height: 35px;
+	background-color: #f2f2f2;
+	color: gray;
+	min-height: 147px;
+}
+
+.w_list_integral_bg{
+	position: absolute;
+	z-index: -1;
+	top: -16px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+}
+.w_list_integral_txt img{
+	position: absolute;
+    top: 0;
+    right: 0;
+    width: 630px;
+    height: auto;
+}
+.w_list_integral_txt span{
+	display: inline-block;
+	font: 300 36px/1 "AvenirLTStd";
+}
+.w_list_integral_txt:hover{
+	background-color: transparent;
+	color: #fff;
+}
+.w_list_integral_txt:hover .w_list_integral_bg{
+    visibility: visible;
+    opacity: 1
+}
+.w_spance{
+	width: 100%;
+	height: 100%;
+	margin-top: 15.5vw;	
+}

@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* 头部导航区域 */
+.l_header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+
+/* .l_container{
+    margin-top: 80px;
+} */
+
+/* 广告图banner区域 */
+.l_banner{
+    background: url(../img/stores_banner.jpg) no-repeat center center;
+    background-size: cover;
+    height: 296px;
+}
+
+
+.l_content{
+    padding: 0 40px;
+}
+
+/* 中文和英文大标题，全国门店 */
+.l_title{
+    text-align: center;
+    padding: 79px 0 58px 0;
+}
+.l_title h1{
+    line-height: 63px;
+    color: #e1251b;
+    font-size: 32px;
+}
+.l_title p{
+    line-height: 67px;
+    color: #e1251b;
+    font-size: 30px;
+}
+
+/* 地图的搜索框区域 */
+.l_search{
+    height: 90px;
+    background: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.l_search span{
+    font-size: 20px;
+    color: #808080;
+    margin-right: 20px;
+}
+.l_search input{
+    font-size: 16px;
+    color: #757575;
+    width: 437px;
+    height: 50px;
+    background: #fff;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.l_search i{
+    width: 60px;
+    height: 50px;
+    display: block;
+    color: #e1251b;
+    background: #ddd;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.l_search em{
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: #e1251b;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* 链接地图API区域 */
+.l_map{
+    height: 600px;
+    margin-bottom: 28px;
+}
+
+/* 地图搜索结果显示区域 */
+.l_info{
+    min-height: 100px;
+}
+.info_list{
+    margin-left: -12px;
+    margin-right: -12px;
+    display: none;
+}
+.info_list li{
+    width: 33.333%;
+    float: left;
+}
+.info_list li .txt{
+    height: 240px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 28px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;  
+    position: relative;
+}
+.info_list li .txt h3{
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.info_list li .txt div{
+    font-size: 14px;
+    color: #808080;
+    line-height: 25px;
+}
+.info_list li .txt span.iconfont{
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    color: #9FA0A0;
+}

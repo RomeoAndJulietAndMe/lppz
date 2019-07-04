@@ -11,6 +11,7 @@
 					var upView = (win.scrollTop() + win.height()) - ($this.offset().top + addH);
 					//downView > 0 表示目标元素在视口上边缘的下方
 					var downView = $this.offset().top + $this[0].offsetHeight - addH - win.scrollTop();
+
 					if (upView > 0 && downView > 0 && !isInView) {//元素在窗口内可见
 						isInView = true;
 						callBack.call($this);

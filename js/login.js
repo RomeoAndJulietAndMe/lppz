@@ -15,11 +15,43 @@ $('.register input[type="button"]').click(function(){
     if( phone == null || phone=="" ){ 
         login_reg.css('visibility','visible');  
         login_reg_span.html("手机号码不能为空");   
-    }else{  
-        if( phoneReg.test(phone) ){  //符合正则           
+    }else{ 
+        if(phoneReg.test(phone) ){
+            // var phone= $('.register input[type="text"]').attr('value');
+            var register_pw = "";
+            // var login_reg =  $('.login_reg');
+            // var login_reg_span = $('.login_reg span');
+            $.ajax({
+                type:'post',
+                url:'../data/php/login.php',
+                data:{register_phone:phone,sql_act:'isinsert'} ,
+                success:function (json){                  
+                    console.log(json.err);
+                    console.log('---------注册----');
+                    if(json.err == '1') {
+                    login_reg.css('visibility','visible');  
+                    login_reg_span.html("此号码已经注册");
+                    console.log(json.msg); 
+                    }
+                    else{
+                        localStorage.setItem('register_phone',phone);
+                        window.location.href="../html/register.html";
+                    }
+                                
+                },
+                fail: function (err){
+                    console.log(err.responseText);
+                    $("body").html(err.responseText);
+                
+                }
+            } );
+        }
+        /* if( phoneReg.test(phone) ){  //符合正则           
             login_reg.css('visibility','hidden');
+
             window.location.href="../html/register.html";           
-        }else{//格式不对
+        } */
+        else{//格式不对
             login_reg_span.html("手机号码格式不正确");
         }
         
@@ -44,7 +76,7 @@ $('.login-to-register').click(function (){
 $('.register .register_phone').blur(registerPh);
 
 //立即注册 
-$('.register input[type="button"]').click(function(){
+/* $('.register input[type="button"]').click(function(){
     var phone= $('.register input[type="text"]').attr('value');
     var register_pw = "";
     var login_reg =  $('.login_reg');
@@ -73,7 +105,7 @@ $('.register input[type="button"]').click(function(){
         }
     });  
     
-});
+}); */
 
 //您的手机号码input格式判断
 function registerPh(){
@@ -90,7 +122,8 @@ function registerPh(){
    return false;
     }else{  
        if( !phoneReg.test(phone) ){  // 格式不正确   
-        login_reg.css('visibility','visible');       
+        login_reg.css('visibility','visible'); 
+   localStorage.setItem('register_phone',phone);
          login_reg_span.html("手机号码格式不正确");   
          return false; 
        }else{

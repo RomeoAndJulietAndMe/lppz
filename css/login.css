@@ -79,7 +79,8 @@
 .login_reg{
     width:306px;
     height:26px; 
-    visibility: hidden;
+    line-height: 30px;
+    visibility: hidden;text-align: left; 
 }
 .login_reg i{
     display: inline-block;

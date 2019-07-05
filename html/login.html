@@ -57,7 +57,7 @@ $('.register-reg .register-to-login').click(function (){
 
 //登录 提交
 $('.login input[type="button"]').click(function (){
-    console.log('denglu')
+    console.log('denglu'+login_phone+login_pw)
     if( loginPhone && loginPw ){
          $.ajax({
              type:'post',
@@ -66,7 +66,7 @@ $('.login input[type="button"]').click(function (){
              success: function (str){
                  console.log('登录成功'+str);
                 if( str.err == '0' )
-                 window.location.href='d_app_index.html.html';
+                 window.location.href='d_app_index.html';
                  if( str.err == '1' ){
                     $('.login .login_reg ').css('visibility','visible');
                     $('.login .login_reg span').html('用户名或密码有误');  

@@ -1,18 +1,4 @@
-$('.c_move_left').onloadAnimate(function(){
-    this.addClass('animated fadeInLeft').css('animation-delay','.3s')
-},30);
-$('.c_move_right').onloadAnimate(function(){
-    this.find('p').eq(0).addClass('animated fadeInRightSmall').css('animation-delay','.3s').next().addClass('animated fadeInRightSmall').css('animation-delay','.5s').next().addClass('animated fadeInRightSmall').css('animation-delay','.7s')
-},30);
-$('.c_move_up').onloadAnimate(function(){
-    this.addClass('animated fadeInUpSmall').find('h2').addClass('animated fadeInUpSmall').css('animation-delay','.3s').next().addClass('animated fadeInUpSmall').css('animation-delay','.5s')
-},30);
-$('.c_move_right-left').onloadAnimate(function(){
-    this.addClass('animated fadeInRight').css('animation-delay','.3s')
-},30);
-$('.c_move_right-right').onloadAnimate(function(){
-    this.find('p').eq(0).addClass('animated fadeInRight').css('animation-delay','.3s').next().addClass('animated fadeInRight').css('animation-delay','.5s').next().addClass('animated fadeInRight').css('animation-delay','.7s')
-},30);
+ 
 $('.dian2 a').click(function (){
     // $('html,body').animate({scrollTop: '549px' });
     $('html,body').animate({scrollTop: $('.shou_banner').css('height')}); 
@@ -40,22 +26,39 @@ $(window).scroll(function(){
       console.log(zhuanqu + kingdom+ gaoduan + banner+$('.shou_banner').css('height') )  ;
       console.log( "===="+parseInt($scrollTop) + parseInt(banner) );
       if( parseFloat($scrollTop) <= parseFloat(banner) ) {
-          $('.dian1 a').css('background','red');
+          $('.dian1 a').css('background','#fff');
+          $('.c_slider a').css('border','1px solid #fff');
+          $('.c_slider_bar span').css('borderLeft','1px dashed #fff');
+      }else{
+        $('.c_slider_bar span').css('borderLeft','1px dashed #e1251b');
+        $('.c_slider a').css('border','1px solid #e1251b');
+        
       }
-      if( parseFloat($scrollTop) > parseFloat(banner) && parseFloat($scrollTop)<= parseFloat(banner) + parseFloat(gaoduan)){
-        $('.dian2 a').css('background','red');
+      if( parseFloat($scrollTop) > parseFloat(banner)-20 && parseFloat($scrollTop)<= parseFloat(banner) + parseFloat(gaoduan)){
+        
+          $('.dian2 a').css('background','#e1251b');
       }
-      if( parseFloat($scrollTop) >  parseFloat(banner) + parseFloat(gaoduan) && parseFloat($scrollTop) <= parseFloat(banner) + parseFloat(gaoduan) +parseFloat(kingdom) ){
-        $('.dian3 a').css('background','red');
+      if( parseFloat($scrollTop) >  parseFloat(banner) + parseFloat(gaoduan) -20 && parseFloat($scrollTop) <= parseFloat(banner) + parseFloat(gaoduan) +parseFloat(kingdom) ){
+        $('.dian3 a').css('background','#e1251b');
       }
       if( parseFloat($scrollTop) > parseFloat(banner) + parseFloat(gaoduan) +parseFloat(kingdom) ){
-        $('.dian4 a').css('background','red');
+        $('.dian4 a').css('background','#e1251b');
 
       }
 
 
 });
 
+//专区
+$('.shou_zhuanqu').onloadAnimate(function(){
+    this.find('li').eq(0).addClass('animated fadeInUpSmall').next().addClass('animated fadeInUpSmall')
+    .css('animation-delay','.3s').next().addClass('animated fadeInUpSmall')
+    .css('animation-delay','.6s').next().addClass('animated fadeInUpSmall')
+    .css('animation-delay','.9s')   
+},30);
+/* $('.shou_zhuanqu li').onloadAnimate(function(){
+    this.addClass('animated fadeInUp');
+}); */
 
 // $('.shou_kingdom_imgs').on("mouseover",".shou_kingdom_img",function () {
 //     var _this = $(this);
@@ -75,3 +78,34 @@ $('.shou_kingdom_imgs').mouseover(function (e){
 }) ;
 
  
+//高端零食
+$('.gaoduan_left').onloadAnimate(function(){
+    this.addClass('animated fadeInLeft').css('animation-delay','.5s')
+},30);
+$('.gaoduan_right .gaoduan_main').onloadAnimate(function(){
+    this.find('p').eq(0).addClass('animated fadeInRightSmall').css('animation-delay','.5s').next().addClass('animated fadeInRightSmall').css('animation-delay','.5s').next().addClass('animated fadeInRightSmall').css('animation-delay','.7s')
+},30);
+$('.gaoduan_left').onloadAnimate(function(){
+    this.addClass('animated fadeInUpSmall').addClass('animated fadeInUpSmall').css('animation-delay','.5s').next().addClass('animated fadeInUpSmall').css('animation-delay','.5s')
+},30);
+/* $('.gaoduan_right h1').onloadAnimate(function(){
+    this.addClass('animated fadeInRight').css('animation-delay','.3s')
+},30); */
+$('.gaoduan_left .gaoduan_main').onloadAnimate(function(){
+    this.find('p').eq(0).addClass('animated fadeInRight').css('animation-delay','.5s').next().addClass('animated fadeInRight').css('animation-delay','.5s').next().addClass('animated fadeInRight').css('animation-delay','.7s')
+},30);
+/* $('.c_move_left').onloadAnimate(function(){
+    this.addClass('animated fadeInLeft').css('animation-delay','.3s')
+},30);
+$('.c_move_right').onloadAnimate(function(){
+    this.find('p').eq(0).addClass('animated fadeInRightSmall').css('animation-delay','.3s').next().addClass('animated fadeInRightSmall').css('animation-delay','.5s').next().addClass('animated fadeInRightSmall').css('animation-delay','.7s')
+},30);
+$('.c_move_up').onloadAnimate(function(){
+    this.addClass('animated fadeInUpSmall').find('h2').addClass('animated fadeInUpSmall').css('animation-delay','.3s').next().addClass('animated fadeInUpSmall').css('animation-delay','.5s')
+},30);
+$('.c_move_right-left').onloadAnimate(function(){
+    this.addClass('animated fadeInRight').css('animation-delay','.3s')
+},30);
+$('.c_move_right-right').onloadAnimate(function(){
+    this.find('p').eq(0).addClass('animated fadeInRight').css('animation-delay','.3s').next().addClass('animated fadeInRight').css('animation-delay','.5s').next().addClass('animated fadeInRight').css('animation-delay','.7s')
+},30); */
